@@ -1,0 +1,44 @@
+/*
+* === block-contact ===
+*/
+.block-contact {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #0E4071;
+  .block-contact__header {
+    text-align: center;
+    color: #ffffff;
+  }
+  .block-contact__body {
+    margin-top: 40px;
+    color: #ffffff;
+  }
+  input,textarea {
+    border: 1px solid #eee;
+    padding: 15px;
+    width: 100%;
+    border-radius: 3px;
+  }
+  input {
+    &[type="radio"],&[type="checkbox"] {
+      width: auto;
+    }
+  }
+  label {
+    margin: 0;
+  }
+  .row {
+    margin-bottom: 15px;
+  }
+  .btn {
+    background-color: #151515;
+    color: #ffffff;
+    padding: 8px 32px;
+    transition: .3s;
+    border: none;
+    &:hover {
+      background-color: #fff;
+      color: #151515;
+    }
+  }
+}

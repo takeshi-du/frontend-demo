@@ -1,0 +1,38 @@
+/*
+* === block-company ===
+*/
+.block-company {
+  margin-top: -420px;
+  .panel {
+    text-align: center;
+    margin-top: -50px;
+    padding: 40px;
+    background-color: #ffffff;
+    .panel__header {
+      .title {
+        font-size: 48px;
+        line-height: 1;
+      }
+      .sub-title {
+        margin-top: 20px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+    .panel__body {
+      .description {
+        margin-top: 30px;
+        margin-bottom: 0;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .btn {
+        margin-top: 30px;
+        color: #ffffff;
+        padding: 10px 70px;
+        display: inline-block;
+      }
+    }
+  }
+}

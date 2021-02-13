@@ -1,0 +1,26 @@
+<section class="block-faq" data-trigger>
+  <div class="block-faq__header">
+    <div class="c-title">
+      <h2 class="title">FAQ</h2>
+      <p class="sub-title">よくある質問</p>
+    </div>
+  </div>
+  <div class="block-faq__body">
+    <div class="container">
+      {% for i in (1..6) %}
+      <div id="faq-{{i}}" class="block-faq__row">
+        <div class="block-faq__q">
+          <p class="title">Q</p>
+          <p class="text">質問の内容</p>
+          <p class="plus" data-toggle="switch" data-target="faq-{{i}}">＋</p>
+          <p class="minus" data-toggle="switch" data-target="faq-{{i}}">-</p>
+        </div>
+        <div class="block-faq__a">
+          <p class="title">A</p>
+          <p class="text">質問の答えをここに記入します。質問の答えをここに記入します。質問の答えをここに記入します。質問の答えをここに記入します。質問の答えをここに記入します。</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

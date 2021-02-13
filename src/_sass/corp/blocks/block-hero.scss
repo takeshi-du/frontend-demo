@@ -1,0 +1,11 @@
+/*
+* === block-hero ===
+*/
+.block-hero {
+  &.c-bgslope.c-bgslope__right:before {
+    background-color: #0E4071;
+  }
+  &.c-bgslope .c-bgslope__inner {
+    padding-bottom: 500px;
+  }
+}

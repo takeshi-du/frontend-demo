@@ -1,0 +1,65 @@
+/*
+* === animation ===
+*/
+.fade-in-left{
+  animation: fade-in-left 500ms;
+}
+.fade-in{
+  display: block !important;
+  animation: fade-in 500ms;
+}
+.fade-in-right{
+  animation: fade-in-left 500ms;
+}
+.fade-in-left-first{
+  animation: fade-in-left 300ms;
+}
+.fade-in-first{
+  animation: fade-in 300ms;
+}
+.fade-in-right-first{
+  display: block !important;
+  animation: fade-in-left 300ms;
+}
+.fade-in-left-slow{
+  display: block !important;
+  animation: fade-in-left 700ms;
+}
+.fade-in-slow{
+  display: block !important;
+  animation: fade-in 700ms;
+}
+.fade-in-right-slow{
+  display: block !important;
+  animation: fade-in-left 700ms;
+}
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

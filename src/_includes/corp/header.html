@@ -1,0 +1,42 @@
+<header id="header" class="block-header" data-headtrigger>
+  <div class="container">
+    <div class="logo">
+      <h1><a href="#">BELIEVE</a></h1>
+    </div>
+    <div class="btn-svg d-lg-none ml-auto" data-toggle="drawer" data-target="drawer-right">
+      <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
+    </div>
+    <div id="drawer-right">
+      <nav class="drawer-mobile drawer-right">
+        <div class="btn-svg d-lg-none" data-toggle="drawer" data-target="drawer-right">
+          <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z"/></svg>
+        </div>
+        <ul class="nav">
+          <li><a data-scroll href="#header">Top</a></li>
+          <li><a data-scroll href="#compay">Company</a></li>
+          <li><a data-scroll href="#service">Service</a></li>
+          <li><a data-scroll href="#recruit">Recruit</a></li>
+          <li><a data-scroll href="#news">News</a></li>
+          <li><a data-scroll href="#contact">お問い合わせはこちら</a></li>
+          <li class="c-megamenu">
+            <a href="#">メガメニュー</a>
+            <div class="c-megamenu__body">
+              <div class="container">
+                <div class="row">
+                  {% for i in (1..4) %}
+                  <div class="col-3">
+                    <a href="#">
+                      <img class="img-fluid" src="https://placehold.it/400x300" alt="image">
+                    </a>
+                    <p class="title"><a href="#">メニューのテキストをここに記入します。</a></p>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>

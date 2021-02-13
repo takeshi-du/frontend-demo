@@ -1,0 +1,299 @@
+/*
+* === Grid ===
+*/
+$enable-grid-classes:                         true !default;
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  // sm: 576px,
+  // md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+// Grid columns
+$grid-columns:                12 !default;
+$grid-gutter-width:           30px !default;
+
+
+/*
+* === Theme ===
+*/
+
+// theme color
+$main: #000000;
+$sub: #2189D5;
+$key: #FF3C00;
+// text color
+$color_title: $main;
+$color_body: $main;
+$color_meta: #999999;
+$color_link: $main;
+$color_link_hover: $main;
+$link_hover_text_decolation: none;
+// border color
+$color_line: #ddd;
+// section color
+$color_header: #fff;
+$color_content: #fff;
+$color_footer: #fff;
+$color_section: #F9F9F7;
+
+// transition
+$transition_link: 300ms;
+
+// font
+$font-size-root: 15px;
+$font-family: “游ゴシック Medium”, “Yu Gothic Medium”, 游ゴシック体, YuGothic, “ヒラギノ角ゴ Pro W3”, “Hiragino Kaku Gothic Pro”, メイリオ, Meiryo, “ＭＳ Ｐゴシック”, sans-serif;
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    "main":   $main,
+    "sub":    $sub,
+    "key":    $key,
+    "transparent":    transparent,
+    "white":    #fff,
+    "light-w":  #F8F8F8,
+    "light":    #EEEEEE,
+    "light-b":  #DCDCDC,
+    "gray-w":   #C0C0C0,
+    "gray":     #A8A8A8,
+    "gray-b":   #808080,
+    "dark-w":   #606060,
+    "dark":     #404040,
+    "dark-b":   #202020,
+    "black":    #000,
+  ),
+  $theme-colors
+);
+// text color
+$text-colors: () !default;
+$text-colors: map-merge(
+  (
+    "title":   $color_title,
+    "body":    $color_body,
+    "meta":    $color_meta,
+    "link":    $color_link
+  ),
+  $text-colors
+);
+// section color
+$section-colors: () !default;
+$section-colors: map-merge(
+  (
+    "header":   $color_header,
+    "content":    $color_content,
+    "footer":    $color_footer,
+    "section":    $color_section
+  ),
+  $section-colors
+);
+// social color
+$social-colors: () !default;
+$social-colors: map-merge(
+  (
+    "facebook":   #3b5998,
+    "twitter":    #1da1f2,
+    "hateb":    #00a4de,
+    "pocket":    #ef4056,
+    "feedly":    #2bb24c
+  ),
+  $social-colors
+);
+
+
+// opacity
+$opacity: () !default;
+$opacity: map-merge(
+  (
+    "10":   1,
+    "8":    0.8,
+    "6":    0.6,
+    "4":    0.4,
+    "2":    0.2,
+    "0":    0
+  ),
+  $opacity
+);
+
+$fz-size: () !default;
+$fz-size: map-merge(
+  (
+    "15": 4rem,
+    "14": 3.6rem,
+    "13": 3.2rem,
+    "12": 2.8rem,
+    "11": 2.4rem,
+    "10": 2rem,
+    "9": 1.8rem,
+    "8": 1.6rem,
+    "7": 1.4rem,
+    "6": 1.2rem,
+    "5": 1rem,
+    "4": 0.9rem,
+    "3": 0.8rem,
+    "2": 0.7rem,
+    "1": 0.6rem,
+  ),
+  $fz-size
+);
+
+// space(padding,margin)
+$space-sizes: () !default;
+$space-sizes: map-merge(
+  (
+    "15": 180px,
+    "14": 150px,
+    "13": 120px,
+    "12": 100px,
+    "11": 80px,
+    "10": 60px,
+    "9": 50px,
+    "8": 40px,
+    "7": 30px,
+    "6": 25px,
+    "5": 20px,
+    "4": 15px,
+    "3": 10px,
+    "2": 5px,
+    "1": 3px,
+    "0": 0,
+  ),
+  $space-sizes
+);
+
+/*
+* === Propaties ===
+*/
+
+// font-weight
+$font-weight: () !default;
+$font-weight: map-merge(
+  (
+    "bold": bold,
+    "800": 800,
+    "400": 400,
+    "200": 200,
+    "100": 100,
+  ),
+  $font-weight
+);
+
+// line-height
+$line-height: () !default;
+$line-height: map-merge(
+  (
+    "5": 2.1,
+    "4": 1.8,
+    "3": 1.5,
+    "2": 1.2,
+    "1": 1,
+  ),
+  $line-height
+);
+
+// box
+$box-sizes: () !default;
+$box-sizes: map-merge(
+  (
+    "100": 100%,
+    "15": 18rem,
+    "14": 16rem,
+    "13": 14rem,
+    "12": 12rem,
+    "11": 10rem,
+    "10": 9rem,
+    "9": 8rem,
+    "8": 7rem,
+    "7": 6rem,
+    "6": 5rem,
+    "5": 4rem,
+    "4": 3rem,
+    "3": 2rem,
+    "2": 1.5rem,
+    "1": 1rem,
+  ),
+  $box-sizes
+);
+
+// box-shadow
+$box-shadow: () !default;
+$box-shadow: map-merge(
+  (
+    "lg": 0 1rem 3rem rgba(0,0,0,.175),
+    "md":  0 .5rem 1rem rgba(0,0,0,.15),
+    "sm": 0 .125rem .25rem rgba(0,0,0,.075),
+    "0": none,
+  ),
+  $box-shadow
+);
+
+// border-radius
+$border-rounded: () !default;
+$border-rounded: map-merge(
+  (
+    "pill": 50px,
+    "lg": 12px,
+    "md":  6px,
+    "sm": 3px,
+    "0": 0,
+  ),
+  $border-rounded
+);
+
+// border-width
+$border-width: () !default;
+$border-width: map-merge(
+  (
+    "10": 10px,
+    "9": 9px,
+    "8": 8px,
+    "7": 7px,
+    "6": 6px,
+    "5": 5px,
+    "4": 4px,
+    "3": 3px,
+    "2": 2px,
+    "1": 1px,
+  ),
+  $border-width
+);
+
+// border-style
+$border-style: () !default;
+$border-style: map-merge(
+  (
+    "dashed": dashed,
+    "dotted": dotted,
+    "double": double,
+    "solid": solid
+  ),
+  $border-style
+);
+
+// transition
+$transition: () !default;
+$transition: map-merge(
+  (
+    "ease-fast":    300ms ease,
+    "ease":         500ms ease,
+    "ease-slow":    700ms ease,
+    "easeout-fast":    300ms ease-out,
+    "easeout":         500ms ease-out,
+    "easeout-slow":    700ms ease-out,
+  ),
+  $transition
+);

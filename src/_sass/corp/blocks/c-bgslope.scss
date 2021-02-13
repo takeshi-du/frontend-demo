@@ -1,0 +1,42 @@
+/*
+* === c-bgslope ===
+*/
+
+.c-bgslope {
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 60%;
+    margin: 3% -10% 0;
+    background: #0B0E10;
+    z-index: -1;
+    @media (max-width: 575.98px) {
+      width: 135%;
+      margin: 3% -15% 0;
+    }
+  }
+  .c-bgslope__inner {
+    padding-bottom: 200px;
+  }
+}
+.c-bgslope__left:before {
+  -webkit-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transform: rotate(12deg);
+  -ms-transform: rotate(12deg);
+  transform: rotate(12deg);
+}
+.c-bgslope__right:before {
+  -webkit-transform-origin: right center;
+  -ms-transform-origin: right center;
+  transform-origin: right center;
+  -webkit-transform: rotate(-12deg);
+  -ms-transform: rotate(-12deg);
+  transform: rotate(-12deg);
+}

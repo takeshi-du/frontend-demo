@@ -1,0 +1,139 @@
+/*
+* === Button ===
+*/
+// button color
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    background-color: $value;
+  }
+  .btn-#{$color}:hover {
+    background-color: darken($value, 10%);
+  }
+  .btn-outline-#{$color} {
+    border: 1px solid $value;
+  }
+  .btn-outline-#{$color}:hover {
+    background-color: darken($value, 10%);
+  }
+}
+// button social
+@each $color, $value in $social-colors {
+  .btn-#{$color} {
+    background-color: $value;
+  }
+  .btn-#{$color}:hover {
+    background-color: darken($value, 10%);
+  }
+  .btn-outline-#{$color} {
+    border: 1px solid $value;
+  }
+  .btn-outline-#{$color}:hover {
+    background-color: darken($value, 10%);
+  }
+}
+/*
+* === button-3d ===
+*/
+.btn-3d {
+  border-bottom: solid 3px rgba(0, 0, 0, 0.2) !important;
+}
+.btn-3d:hover {
+  border-bottom-color: rgba(0, 0, 0, 0) !important;
+}
+
+/*
+* === btn-svg ===
+*/
+.btn-svg {
+  position: relative;
+}
+.btn-svg:after,
+.btn-icon:after {
+  content: ""; 
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+}
+
+/*
+* === btn-slide ===
+*/
+$btn-slides: (
+  alpha: (
+    gstart: map-get($theme-colors, "white"),
+    gend: map-get($theme-colors, "black"),
+    tstart: map-get($theme-colors, "black"),
+    tend: map-get($theme-colors, "white")
+  ),
+  beta: (
+    gstart: map-get($theme-colors, "black"),
+    gend: map-get($theme-colors, "white"),
+    tstart: map-get($theme-colors, "white"),
+    tend: map-get($theme-colors, "black")
+  ),
+  gamma: (
+    gstart: map-get($theme-colors, "main"),
+    gend: map-get($theme-colors, "key"),
+    tstart: map-get($theme-colors, "white"),
+    tend: map-get($theme-colors, "white")
+  ),
+  delta: (
+    gstart: map-get($theme-colors, "key"),
+    gend: map-get($theme-colors, "main"),
+    tstart: map-get($theme-colors, "white"),
+    tend: map-get($theme-colors, "white")
+  )
+);
+
+.btn-slide {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all $transition_link;
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  &:before {
+    content: "";
+    background-color: #21D4FD;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale(4) translateX(-100%);
+    transition: all $transition_link * 1.5 ease-out;
+  }
+  
+  &:hover,
+  &:focus,
+  &:active {    
+    &:before {
+      transform: scale(4) translate(37%);
+    } 
+  }
+}
+
+@each $bname, $bcolors in $btn-slides {
+  .btn--#{$bname} {
+    background-color: map-get($bcolors, gstart);
+    color: map-get($bcolors, tstart);
+  
+    &:before {
+      background-color: map-get($bcolors, gend);
+      background-image: linear-gradient(to right, map-get($bcolors, gend) 30%, map-get($bcolors, gstart) 100%);
+      position: absolute;
+    }
+    &:hover,
+    &:focus,
+    &:active {    
+      color: map-get($bcolors, tend);
+    }
+  }
+}

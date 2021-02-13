@@ -1,0 +1,42 @@
+/*
+* === c-megamenu ===
+*/
+.c-megamenu {
+  .c-megamenu__body {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    background: #0E4071;
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: opacity .4s ease;
+    transition: opacity .4s ease;
+  }
+  &:hover {
+    .c-megamenu__body {
+      top: 52px;
+      visibility: visible;
+      opacity: 1;
+      @media (max-width: 991.98px) {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
+  // style
+  .c-megamenu__body {
+    padding: 30px 0;
+    color: #ffffff;
+    .row {
+      width: 100%;
+    }
+    .title {
+      margin-top: 10px;
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+  }
+}

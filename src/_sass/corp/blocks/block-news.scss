@@ -1,0 +1,25 @@
+/*
+* === block-news ===
+*/
+.block-news {
+  .block-news__header {
+    text-align: center;
+  }
+  .block-news__body {
+    margin-top: 50px;
+  }
+  .nav {
+    li {
+      margin-bottom: 15px;
+      padding: 20px 30px;
+      border: 1px solid #eee;
+      a {
+        display: inline-block;
+        font-weight: bold;
+        @media (min-width: 992px) {
+          margin-left: 25px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+/*
+* === block-footer ===
+*/
+.block-footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #151515;
+  color: #ffffff;
+  font-size: 12px;
+  @media (max-width: 991.98px) {
+    text-align: center;
+  }
+  a{
+    color: #ffffff;
+    &:hover {
+      color: #cccccc;
+    }
+  }
+  p {
+    margin: 0;
+  }
+  .nav {
+    @media (max-width: 991.98px) {
+      display: block;
+    }
+    li{
+      margin-right: 30px;
+      @media (max-width: 991.98px) {
+        margin-right: 0;
+        padding: 10px 0;
+      }
+    }
+  }
+}

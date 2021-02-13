@@ -1,0 +1,72 @@
+/*
+* === block-faq ===
+*/
+.block-faq {
+  margin-top: 100px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #FAFAFA;
+  .block-faq__header {
+    text-align: center;
+  }
+  .block-faq__body {
+    margin-top: 40px;
+  }
+  .block-faq__row {
+    margin-bottom: 20px;
+  }
+  .block-faq__q {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    p {
+      margin: 0;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .text {
+      font-size: 16px;
+      margin-left: 15px;
+    }
+    .plus,.minus {
+      width: 24px;
+      height: 24px;
+      text-align: center;
+      margin-left: auto;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .minus {
+      display: none;
+    }
+  }
+  .block-faq__a {
+    display: none;
+    opacity: 0;
+    padding: 15px;
+    p {
+      margin: 0;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .text {
+      font-size: 16px;
+    }
+  }
+  .block-faq__row.is-active .block-faq__q {
+    .plus {display: none;}
+    .minus {display: block;}
+  }
+  .block-faq__row.is-active .block-faq__a {
+    display: block !important;
+    opacity: 10;
+    animation: fade-in 400ms;
+  }
+}

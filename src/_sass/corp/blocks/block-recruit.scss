@@ -1,0 +1,44 @@
+/*
+* === block-recruit ===
+*/
+.block-recruit {
+  margin-top: 100px;
+  .panel {
+    text-align: right;
+    margin-top: -50px;
+    padding: 40px;
+    background-color: transparent;
+    color: #ffffff;
+    .panel__header {
+      .title {
+        font-size: 48px;
+        line-height: 1;
+      }
+      .sub-title {
+        margin-top: 20px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+    .panel__body {
+      .description {
+        margin-top: 30px;
+        margin-bottom: 0;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .btn {
+        background-color: #ffffff;
+        margin-top: 30px;
+        color: #151515;
+        padding: 10px 70px;
+        display: inline-block;
+      }
+    }
+  }
+  .c-bgslope.c-bgslope__right:before {
+    background-color: #0E4071;
+    z-index: -2;
+  }
+}

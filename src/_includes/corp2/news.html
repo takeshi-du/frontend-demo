@@ -1,0 +1,14 @@
+<div class="news">
+  <div class="news__title">
+    <p class="news__title-main">News</p>
+    <div class="news__title-sub">お知らせ</div>
+  </div>
+  <div class="news__container">
+    {% for i in (1..3) %}
+    <a href="#" class="news__list">
+      <p class="news__list-title">ホームページをリニューアルしました。これにともない、旧ドメインの廃止とデータベースサーバーの移管作業についてのご報告。</p>
+      <div class="news__list-date">2021.03.17</div>
+    </a>
+    {% endfor %}
+  </div>
+</div>

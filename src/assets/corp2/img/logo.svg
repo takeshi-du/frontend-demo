@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="511" height="63" viewBox="0 0 511 63">
+  <g id="グループ_2" data-name="グループ 2" transform="translate(-399 -361)">
+    <g id="グループ_1" data-name="グループ 1" transform="translate(130.5 28.5)">
+      <g id="多角形_2" data-name="多角形 2" transform="translate(292.5 332.5)" fill="none">
+        <path d="M36.5,0,73,63H0Z" stroke="none"/>
+        <path d="M 36.5 7.979145050048828 L 6.940299987792969 59 L 66.05970001220703 59 L 36.5 7.979145050048828 M 36.5 0 L 73 63 L 0 63 L 36.5 0 Z" stroke="none" fill="#383b4e"/>
+      </g>
+      <path id="多角形_1" data-name="多角形 1" d="M36.5,0,73,63H0Z" transform="translate(268.5 332.5)" fill="#383b4e"/>
+    </g>
+    <text id="株式会社CORP" transform="translate(516 414)" fill="#383b4e" font-size="57" font-family="TsukuBRdGothic-Regular, Tsukushi B Round Gothic"><tspan x="0" y="0">株式会社CORP</tspan></text>
+  </g>
+</svg>

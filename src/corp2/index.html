@@ -3,13 +3,44 @@ layout: base
 ---
 
 <head>
-  {% include corp/head.html %}
+  {% include corp2/head.html %}
 </head>
 <body>
-  {% include corp/header.html %}
-  {% include corp/hero.html %}
-  <div id="content">
-    <a class="btn__transition" href="#">View More</a>
+  <div id="siteHeader" class="header">
+    <div class="header__nav">
+      <h1 class="header__logo"><a href="#"></a></h1>
+      <ul class="header__menu">
+
+        <li><a href="#">製品情報</a></li>
+        <li><a href="#">サービス</a></li>
+        <li><a href="#">CORPについて</a></li>
+        <li><a href="#">ブログ</a></li>
+        <li><a href="#">サポート</a></li>
+        <li><a href="#">お知らせ</a></li>
+        <li><a href="#"><svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M15.853 16.56c-1.683 1.517-3.911 2.44-6.353 2.44-5.243 0-9.5-4.257-9.5-9.5s4.257-9.5 9.5-9.5 9.5 4.257 9.5 9.5c0 2.442-.923 4.67-2.44 6.353l7.44 7.44-.707.707-7.44-7.44zm-6.353-15.56c4.691 0 8.5 3.809 8.5 8.5s-3.809 8.5-8.5 8.5-8.5-3.809-8.5-8.5 3.809-8.5 8.5-8.5z"/></svg></a></li>
+      </ul>
+      <a class="header__btn" href="#">オンラインショップ</a>
+    </div>
   </div>
-  {% include corp/footer.html %}
+  <div id="luxy">
+    <div id="siteHero" class="header">
+      <div class="header__copy">
+        <p class="header__copu-sub">DEEP FOREST AS HOUSE CARE</p>
+        <p class="header__copy-main">三雲山から<br>山郷へ</p>
+      </div>
+    </div>
+    <div id="content">
+      {% include corp2/about.html %}
+      {% include corp2/feature.html %}
+      {% include corp2/cv.html %}
+      {% include corp2/news.html %}
+      {% include corp2/pagelink.html %}
+      {% include corp2/cv2.html %}
+    </div>
+    {% include corp2/footer.html %}
+  </div>
+
+  <script charset="utf-8">
+      luxy.init();
+  </script>
 </body>

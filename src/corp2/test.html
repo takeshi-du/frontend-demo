@@ -1,0 +1,61 @@
+---
+layout: base
+---
+
+<head>
+  {% include corp2/head.html %}
+</head>
+<body>
+  <div class="buttons">
+    <ul>
+      <li class="btn-1"><a href="#"><span>View More</span></a></li>
+      <li class="btn-2"><a href="#">ALL NEWS</a></li>
+    </ul>
+  </div>
+  <button data-toggle="switch" data-target="animBox">アニメーションToggle</button>
+  <div id="animBox" class="rise-text">
+    <p class="anim-rise-up anim-delay-0">テキスト１テキスト１テキスト１</p>
+    <p class="anim-rise-up anim-delay-1">テキスト２テキスト２テキスト２</p>
+    <p class="anim-rise-up anim-delay-2">テキスト３テキスト３テキスト３</p>
+  </div>
+  <style>
+    .anim-rise-up {
+      transition: transform .8s ease,opacity .8s ease;
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    .is-active .anim-rise-up {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    .anim-delay-0 {transition-delay: 0;}
+    .anim-delay-1 {transition-delay: .1s;}
+    .anim-delay-2 {transition-delay: .2s;}
+  </style>
+  <script>
+    window.addEventListener('load', () => {
+      console.log('test');
+      var btn = document.querySelectorAll('[data-toggle="switch"]');
+
+      Array.from(btn).forEach((el) => {
+        el.addEventListener('click', (event) => {
+          // prevent link
+          event.preventDefault();
+
+          console.log('test ok');
+
+          // set Target
+          var target = document.getElementById(el.getAttribute('data-target'));
+
+          if (!target) {
+            // when target null set class on self
+            el.classList.toggle('is-active');
+          } else {
+            // set Class on Target
+            target.classList.toggle('is-active'); 
+          }
+        });
+      });
+    });
+  </script>
+</body>
